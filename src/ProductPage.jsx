@@ -6,6 +6,12 @@ const ProductPage = () => {
     <>
       <div className='page'>
         <div className='productImage'></div>
+        <div className='gallery'>
+          <img className='galleryImage' />
+          <img className='galleryImage' />
+          <img className='galleryImage' />
+          <img className='galleryImage' />
+        </div>
         <div className='productInfo'>
           <h1>Product Name</h1>
           <p>Product Description</p>
