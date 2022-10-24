@@ -22,7 +22,7 @@ const ProductPage = () => {
             the weather can offer.
           </p>
           <p id='price'>$125.00</p>
-
+          <p id='strikethrough'>$250.00</p>
           <Counter />
           <AddToCart />
         </div>

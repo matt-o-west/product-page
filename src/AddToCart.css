@@ -5,6 +5,8 @@
     background-color: #FF7E1B;
     width: 14em;
     border-radius: .5rem;
+    font-weight: 600;
+    color: white;
 }
 
 #cart {
@@ -15,4 +17,6 @@
     min-height: .5rem;
     min-width: .5rem;
     padding: 0rem 0.5rem;
+    fill: #fff;
 }
+

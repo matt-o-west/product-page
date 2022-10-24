@@ -1,8 +1,11 @@
 import React from 'react'
+import { doc, setDoc } from 'firebase/firestore'
 import './AddToCart.css'
 
 const AddToCart = () => {
-  const handleAddToCartClick = () => {
+  // Add a new document in collection "cities"
+
+  const handleAddToCartClick = async () => {
     alert('Added to cart!')
   }
 

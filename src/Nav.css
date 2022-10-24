@@ -7,21 +7,25 @@ nav {
     left: 0;
     border-bottom: 1px solid #979797;
     width: 100%;
+    min-height: 6rem;
 }
 
 button {
     display: inline-block;
+    align-self: center;
     font-size: 16px;
     margin: 4px 2px;
     cursor: pointer;
     font-family: 'Kumbh Sans', sans-serif;
     margin-bottom: 0.5rem;
+
 }
 
 .ui {
     display: inline-flex;
     padding: 0.5rem;
     margin-left: 20rem;
+    align-self: center;
 }
 
 #logo {
@@ -32,7 +36,7 @@ button {
     height: 100%;
     max-height: 15%;
     max-width: 15%;
-    padding:  1rem;
+    padding:  2em;
     margin-right: 2rem;
 }
 
