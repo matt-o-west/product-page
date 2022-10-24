@@ -59,17 +59,6 @@ img#avatar:hover {
     transition: ease-in-out 0.2s;
 }
 
-#cart {
-    display: flex;
-    align-self: center;
-    align-items: center;
-    justify-content: center;
-    width: 20%;
-    height: 20%;
-    min-height: .5rem;
-    min-width: .5rem;
-}
-
 img#cart:hover {
     transform: scale(1.1);
     transition: ease-in-out 0.2s;
