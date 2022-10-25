@@ -9,10 +9,10 @@ const ProductPage = () => {
       <div className='page'>
         <div className='productImage'></div>
         <div className='gallery'>
-          <img className='galleryImage' />
-          <img className='galleryImage' />
-          <img className='galleryImage' />
-          <img className='galleryImage' />
+          <img className='galleryImage' src='image-product-1-thumbnail.jpg' />
+          <img className='galleryImage' src='image-product-2-thumbnail.jpg' />
+          <img className='galleryImage' src='image-product-3-thumbnail.jpg' />
+          <img className='galleryImage' src='image-product-4-thumbnail.jpg' />
         </div>
         <div className='productInfo'>
           <h1>Limited Edition Sneakers</h1>
