@@ -17,6 +17,10 @@
     min-height: .5rem;
     min-width: .5rem;
     padding: 0rem 0.5rem;
+
+}
+
+svg path {
     fill: #fff;
 }
 
