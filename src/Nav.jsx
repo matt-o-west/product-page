@@ -1,20 +1,24 @@
 import './Nav.css'
-import { Box, Modal, Typography } from '@material-ui/core'
+import { Box } from '@material-ui/core'
 import Button from '@material-ui/core/Button'
 import { useState } from 'react'
+import CartTable from './CartTable'
 
 const Nav = () => {
   const [open, setOpen] = useState(false)
 
   const handleToggleCart = () => {
     setOpen(!open)
+    console.log(open ? 'block' : 'none')
   }
 
   return (
     <nav>
       <img src='logo.svg' alt='company logo' id='logo' />
       <button className='navButton'>Collections</button>
-      <button className='navButton'>Men</button>
+      <button display={open ? 'block' : 'none'} className='navButton'>
+        Men
+      </button>
       <button className='navButton'>Women</button>
       <button className='navButton'>About</button>
       <button className='navButton'>Contact</button>
@@ -22,8 +26,9 @@ const Nav = () => {
         <Button onClick={handleToggleCart}>
           <img src='icon-cart.svg' aria-hidden='true' id='cart' />
         </Button>
-
-        <Modal open={open}></Modal>
+        <Box>
+          <CartTable />
+        </Box>
         <img src='image-avatar.png' alt='avatar' id='avatar' />
       </div>
     </nav>
