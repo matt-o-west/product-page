@@ -7,12 +7,17 @@ function App() {
   return (
     <div className='App'>
       <Router>
+        <Nav />
         <Switch>
           <Route path='/'>
             <Homepage />
           </Route>
-          <Nav />
-          <ProductPage />
+          <Route path='/products'>
+            <ProductPage />
+          </Route>
+          <Route path='/cart'>
+            <Cart />
+          </Route>
         </Switch>
       </Router>
     </div>
