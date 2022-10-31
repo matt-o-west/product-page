@@ -3,6 +3,7 @@ import { Box } from '@material-ui/core'
 import Button from '@material-ui/core/Button'
 import { useState } from 'react'
 import CartTable from './CartTable'
+import { NavLink } from 'react-router-dom'
 
 const Nav = () => {
   const [open, setOpen] = useState(false)
@@ -15,20 +16,27 @@ const Nav = () => {
   return (
     <nav>
       <img src='logo.svg' alt='company logo' id='logo' />
-      <button className='navButton'>Collections</button>
-      <button display={open ? 'block' : 'none'} className='navButton'>
-        Men
-      </button>
-      <button className='navButton'>Women</button>
-      <button className='navButton'>About</button>
-      <button className='navButton'>Contact</button>
+      <NavLink
+        exact
+        activeClassName='navButton'
+        className='link'
+        to='/products'
+      >
+        Products
+      </NavLink>
+      <NavLink exact activeClassName='navButton' className='link' to='/about'>
+        About
+      </NavLink>
+      <NavLink exact activeClassName='navButton' className='link' to='/contact'>
+        Contact
+      </NavLink>
       <div className='ui'>
         <Button onClick={handleToggleCart}>
           <img src='icon-cart.svg' aria-hidden='true' id='cart' />
         </Button>
-        <Box>
-          <CartTable />
-        </Box>
+        {/*<Box display={open ? 'block' : 'none'}>
+                  <CartTable />
+              </Box>*/}
         <img src='image-avatar.png' alt='avatar' id='avatar' />
       </div>
     </nav>
