@@ -4,10 +4,8 @@ import Counter from './Counter'
 import AddToCart from './AddToCart'
 import { useState } from 'react'
 
-const ProductPage = () => {
+const ProductPage = ({ cart, onProductAdd, onProductDelete }) => {
   const [imageShown, setImageShown] = useState('image-product-1.jpg')
-
-  console.log(imageShown)
 
   const handleImageClick = (e) => {
     setImageShown(`image-product-${e.target.id}.jpg`)
@@ -60,7 +58,7 @@ const ProductPage = () => {
           <p id='price'>$125.00</p>
           <p id='strikethrough'>$250.00</p>
           <Counter />
-          <AddToCart />
+          <AddToCart onClick={onProductAdd} cart={cart} />
         </div>
       </div>
     </>

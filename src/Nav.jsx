@@ -1,8 +1,8 @@
 import './Nav.css'
-import { Box } from '@material-ui/core'
+//import { Box } from '@material-ui/core'
 import Button from '@material-ui/core/Button'
 import { useState } from 'react'
-import CartTable from './CartTable'
+import CartModal from './helpers/Modal'
 import { NavLink } from 'react-router-dom'
 
 const Nav = () => {
@@ -10,7 +10,7 @@ const Nav = () => {
 
   const handleToggleCart = () => {
     setOpen(!open)
-    console.log(open ? 'block' : 'none')
+    console.log(open)
   }
 
   return (
@@ -34,9 +34,7 @@ const Nav = () => {
         <Button onClick={handleToggleCart}>
           <img src='icon-cart.svg' aria-hidden='true' id='cart' />
         </Button>
-        {/*<Box display={open ? 'block' : 'none'}>
-                  <CartTable />
-              </Box>*/}
+        {open && <CartModal open={open} onClose={handleToggleCart} />}
         <img src='image-avatar.png' alt='avatar' id='avatar' />
       </div>
     </nav>
