@@ -14,9 +14,12 @@ const CartTable = () => {
           </tr>
           <tr>
             <td>
-              <img src='image-product-1-thumbnail.jpg' alt='product 1' />
               <p>Emroided Hooded</p>
-              <p>Pullover-Fleece</p>
+              <img
+                className='product-thumb'
+                src='image-product-1-thumbnail.jpg'
+                alt='product 1'
+              />
             </td>
             <td>$35.00</td>
             <td>1</td>

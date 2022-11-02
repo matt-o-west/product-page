@@ -1,0 +1,23 @@
+tbody {
+    display: block;
+    max-height: 200px;
+    overflow: auto;
+}
+
+td {
+
+    vertical-align: middle;
+    text-align: center;
+}
+
+.product-thumb {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    max-height: 5rem;
+    max-width: 100%;
+    object-fit: cover;
+    border-radius: 1rem;
+    border: 1px solid black;
+}
