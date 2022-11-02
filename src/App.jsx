@@ -11,12 +11,26 @@ function App() {
   const [cart, setCart] = useState([])
   const [total, setTotal] = useState(0)
 
-  const handleProductAdd = () => {
+  const handleProductAdd = (newProduct) => {
     console.log('product added to cart')
+    const existingProduct = cart.find((product) => product.id === newProduct.id)
+
+    if (existingProduct) {
+      const updatedCart = cart.map((product) =>
+        product.id === newProduct.id
+          ? { ...product, quantity: product.quantity + 1 }
+          : product
+      )
+      setCart(updatedCart)
+    } else {
+      setCart([...cart, { ...newProduct, quantity: 1 }])
+    }
   }
 
-  const handleProductDelete = () => {
+  const handleProductDelete = (newProduct) => {
     console.log('product deleted from cart')
+    const updatedCart = cart.filter((product) => product.id !== newProduct.id)
+    setCart(updatedCart)
   }
 
   return (

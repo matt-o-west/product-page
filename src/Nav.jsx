@@ -5,7 +5,7 @@ import { useState } from 'react'
 import CartModal from './helpers/Modal'
 import { NavLink } from 'react-router-dom'
 
-const Nav = () => {
+const Nav = ({ cart }) => {
   const [open, setOpen] = useState(false)
 
   const handleToggleCart = () => {
@@ -34,7 +34,9 @@ const Nav = () => {
         <Button onClick={handleToggleCart}>
           <img src='icon-cart.svg' aria-hidden='true' id='cart' />
         </Button>
-        {open && <CartModal open={open} onClose={handleToggleCart} />}
+        {open && (
+          <CartModal open={open} onClose={handleToggleCart} cart={cart} />
+        )}
         <img src='image-avatar.png' alt='avatar' id='avatar' />
       </div>
     </nav>

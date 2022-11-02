@@ -9,12 +9,15 @@ const CartModal = ({ open, onClose }) => {
     <>
       <Drawer anchor='right' open={open} onClose={onClose}>
         <Typography id='modal-modal-title' variant='h6' component='h2'>
-          Text in a modal
+          Your Cart
         </Typography>
         <Typography id='modal-modal-description' sx={{ mt: 2 }}>
-          Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
+          {cart.length > 0 ? (
+            <CartTable cart={cart} />
+          ) : (
+            <p>Your cart is empty</p>
+          )}
         </Typography>
-        <CartTable />
       </Drawer>
     </>
   )
