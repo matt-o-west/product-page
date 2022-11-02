@@ -58,7 +58,7 @@ const ProductPage = ({ cart, onProductAdd, onProductDelete }) => {
           <p id='price'>$125.00</p>
           <p id='strikethrough'>$250.00</p>
           <Counter />
-          <AddToCart onClick={onProductAdd} cart={cart} />
+          <AddToCart onClick={onProductAdd} />
         </div>
       </div>
     </>

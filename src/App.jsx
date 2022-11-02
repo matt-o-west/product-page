@@ -2,7 +2,6 @@ import './App.css'
 import Nav from './Nav'
 import ProductPage from './ProductPage'
 import HomePage from './HomePage'
-import Cart from './Cart'
 import { BrowserRouter as Router } from 'react-router-dom'
 import { Routes, Route } from 'react-router-dom'
 import { useState } from 'react'
@@ -53,7 +52,6 @@ function App() {
             path=':id'
             element={<ProductPage onProductAdd={handleProductAdd} />}
           />
-          <Route path='/cart' element={<Cart />} />
         </Routes>
       </Router>
     </div>
