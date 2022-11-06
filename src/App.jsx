@@ -6,7 +6,7 @@ import { BrowserRouter as Router } from 'react-router-dom'
 import { Routes, Route } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import { db } from '../firebase.config'
-import { collection, getDocs, addDoc } from 'firebase/firestore'
+import { setDoc, getDocs, doc, collection } from 'firebase/firestore/lite'
 
 function App() {
   const [cart, setCart] = useState([])
