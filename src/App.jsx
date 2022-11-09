@@ -5,19 +5,29 @@ import HomePage from './HomePage'
 import { BrowserRouter as Router } from 'react-router-dom'
 import { Routes, Route } from 'react-router-dom'
 import { useState, useEffect } from 'react'
-import { db } from '../firebase.config'
-import { setDoc, getDocs, doc, collection } from 'firebase/firestore/lite'
+import db from '../firebase.config'
+import {
+  setDoc,
+  getDocs,
+  doc,
+  collection,
+  CollectionReference,
+} from 'firebase/firestore/lite'
+
+//import 'firebase/firestore'
+
+const colRef = new CollectionReference(db, 'cart')
 
 function App() {
   const [cart, setCart] = useState([])
   const [total, setTotal] = useState(0)
 
   //uncommenting this line breaks the app currently
-  const cartRef = collection(db, 'cart')
+  //const cartRef = collection(db, 'cart')
 
   useEffect(() => {
     const getCart = async () => {
-      const data = await getDocs(cartRef)
+      const data = await getDocs(colRef)
       const cart = data.docs.map((doc) => doc.data())
 
       setCart(cart)

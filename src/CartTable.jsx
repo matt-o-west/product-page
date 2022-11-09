@@ -2,7 +2,7 @@ import React from 'react'
 import './CartTable.css'
 
 const CartTable = ({ cart }) => {
-  console.log(cart)
+  //console.log(cart)
 
   const cartItems = cart.map((item) => {
     return (
