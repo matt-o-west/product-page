@@ -7,8 +7,9 @@ import { Routes, Route } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import db from '../firebase.config'
 import {
-  setDoc,
+  addDoc,
   getDocs,
+  setDoc,
   doc,
   collection,
   CollectionReference,
@@ -26,13 +27,15 @@ function App() {
   //const cartRef = collection(db, 'cart')
 
   useEffect(() => {
-    const getCart = async () => {
-      const data = await getDocs(colRef)
-      const cart = data.docs.map((doc) => doc.data())
-
-      setCart(cart)
+    try {
+      const getCart = async () => {
+        const data = await getDocs(colRef)
+        console.log(data)
+      }
+      getCart()
+    } catch (error) {
+      console.log(error)
     }
-    getCart()
   }, [])
 
   const handleProductAdd = (newProduct) => {
